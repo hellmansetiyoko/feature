@@ -1,0 +1,29 @@
+Reopsitories
+folder: App\Repositories\UserRepository
+1. CRUD
+
+*Create
+    interface : CreateNewUserContract
+    class name: CreateNewUser
+    method : create(array $input)
+    return : user model
+
+*Read
+    interface : ReadUserContract
+    class name: ReadUserInformation
+    method : read($id)
+    return : array formated
+
+*Update
+    interface : UpdateUserProfileInformationContract
+    class name: UpdateUserProfileInformation
+    method : update($user, array $input)
+    return : user model
+
+*Delete
+    interface : DeleteUserContract
+    class name: DeleteUser
+    method : delete($user)
+    return : user model
+
+*assign to role
