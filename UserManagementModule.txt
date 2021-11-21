@@ -1,18 +1,27 @@
-Reopsitories
-folder: App\Repositories\UserRepository
+table: user
+coloumn:
+id, name, email, password,
+model: App\Models\User
 1. CRUD
 
+#Repositories
+App\Repositories\UserRepository
+App\Contract\UserRepositoryContract
+
+method:
+
+public function getAllUser()
+public function getUserbyid($id)
+public function getUserbyEmail($email)
+private function format()
+
+
+#Services
 *Create
     interface : CreateNewUserContract
     class name: CreateNewUser
     method : create(array $input)
     return : user model
-
-*Read
-    interface : ReadUserContract
-    class name: ReadUserInformation
-    method : read($id)
-    return : array formated
 
 *Update
     interface : UpdateUserProfileInformationContract
@@ -25,5 +34,3 @@ folder: App\Repositories\UserRepository
     class name: DeleteUser
     method : delete($user)
     return : user model
-
-*assign to role
